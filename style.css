@@ -15,4 +15,23 @@
   --battleship-gray: hsl(0, 0%, 70%);
   --light-periwinkle: hsl(240, 30%, 83%);
   --maximum-blue-perple: hsl(231, 50%, 77%);
+
+
+  /* text */
+
+  --ff-poppins: 'Poppins', sans-serif;
+
+/* font size and weight */
+  --fs-1: 36px;
+	--fs-2: 30px;
+	--fs-3: 22px;
+	--fs-4: 18px;
+	--fs-5: 16px;
+	--fs-6: 14px;
+
+  --fw-500: 500;
+	--fw-600: 600;
+
+  /* transition */
+  --transition: 0.15s ease-in-out;
 }
