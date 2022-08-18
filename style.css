@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+/* Custom Property */
+:root{
+  /* color */
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --amaranth: hsl(349, 69%, 53%);
+  --xiketic-1: hsl(272, 55%, 6%);
+  --xiketic-2: hsl(256, 100%, 3%);
+  --nsu-purple: hsl(270, 55%, 31%);
+  --silver-sand: hsl(220, 10%, 76%);
+  --purple-violet: hsl(266, 55%, 15%);
+  --battleship-gray: hsl(0, 0%, 70%);
+  --light-periwinkle: hsl(240, 30%, 83%);
+  --maximum-blue-perple: hsl(231, 50%, 77%);
+}
