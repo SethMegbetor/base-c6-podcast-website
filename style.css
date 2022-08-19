@@ -81,6 +81,19 @@ body {
 }
 
 /* come back for btn primary and the hover*/
+.btn-primary {
+  background: var(--amaranth);
+  color: var(--white);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  text-transform: capitalize;
+  padding: 12px 40px;
+  border-radius: 25px;
+}
+
+.btn-primary:hover {
+  --amaranth: hsl(349, 69%, 43%);
+}
 
 .h1,
 .h2,
@@ -399,7 +412,136 @@ footer .container {
   border-top: 1px solid hsla(240, 30%, 83%, 0.1);
 }
 
+.go-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--amaranth);
+  color: var(--white);
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease-in;
+}
+
+.go-top:hover {
+  --amaranth: hsl(349, 69%, 43%);
+}
+
+.go-top:active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+/* 
+
+Responsiveness: Using Media Queries 
+
+*/
+
+/* larger than 360px */
+@media (min-width: 360px) {
+  :root {
+    --fs-1: 42px;
+    --fs-2: 32px;
+  }
+}
+
+/* larger than 450px */
+@media (min-width: 450px) {
+  :root {
+    --fs-1: 48px;
+    --fs-2: 36px;
+    --fs-3: 24px;
+  }
+
+  .feature-banner-bg {
+    width: 150%;
+  }
+
+  .overview-content {
+    padding: 0 40px 50px;
+  }
+
+  .blog-title {
+    --fs-2: 32px;
+  }
+
+  .blog-post-title {
+    --fs-3: 22px;
+  }
+}
+
+/* larger than 600px */
+@media (min-width: 600px) {
+  :root {
+    --fs-1: 52px;
+  }
+
+  .container {
+    max-width: 520px;
+    margin: auto;
+  }
+
+  .blog-banner {
+    height: 300px;
+  }
+
+  .blog-title{
+    --fs-2: 42px;
+  }
+
+.footer-brand{
+  margin-bottom: 40px;
+}
+
+.footer-link-box{
+  grid-template-columns: 1fr 1fr;
+}
+
+}
+
+/* screen larger than 768px */
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .download-list {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: fit-content;
+    margin: auto;
+    gap: 80px;
+  }
+  .features-item {
+    max-width: 450px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .feature-banner-bg {
+    width: 170%;
+  }
+
+  .blog-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* screen that is larger than 1024px */
 @media (min-width: 1024px) {
+  .container {
+    max-width: 970px;
+  }
+
   .navbar {
     position: static;
     visibility: visible;
@@ -408,7 +550,125 @@ footer .container {
     box-shadow: none;
   }
 
+  .nav-open-btn,
+  .nav-close-btn {
+    display: none;
+  }
+
+  .navbar-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
   .navbar-link {
     position: relative;
+  }
+
+  .navbar-link:hover {
+    background: none;
+  }
+
+  .navbar-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    background: transparent;
+    width: 50%;
+    height: 2px;
+  }
+
+  .navbar-link:hover::before {
+    background: var(--white);
+  }
+
+  .navbar .btn-primary {
+    display: block;
+    margin-left: 15px;
+  }
+
+  /* hero section */
+
+  .hero {
+    position: relative;
+  }
+
+  .hero-content {
+    width: 50%;
+  }
+
+  .hero-banner {
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    background: url("./images/hero.png") no-repeat;
+    background-size: contain;
+    width: 70%;
+    padding-bottom: 50%;
+  }
+
+  /* features section */
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+  }
+
+  .features-list:first-child li {
+    text-align: right;
+  }
+
+  .features-list:last-child li {
+    text-align: left;
+  }
+
+  /* overview */
+
+  .overview-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .overview-banner img {
+    max-width: 380px;
+  }
+
+  .overview-content {
+    width: 55%;
+    padding: 40px;
+  }
+
+  /* blog */
+  .blog-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .blog-banner {
+    height: 200px;
+  }
+
+  /* footer */
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-link-box {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-btn-group {
+    margin-left: 20px;
+  }
+}
+
+/* screen larger than 1200px */
+@media (min-width: 1200px) {
+  * {
+    display: none;
   }
 }
