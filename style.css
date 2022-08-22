@@ -185,6 +185,12 @@ padding: 3px;
 border-radius: 8px;
 }
 
+.nav-close-btn{
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
 main {
   background: var(--xiketic-1);
 }
@@ -288,6 +294,12 @@ main {
 
 .overview-content {
   padding: 0 25px 40px;
+}
+
+.overview-item{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .overview-text {
@@ -464,7 +476,7 @@ footer .container {
   --amaranth: hsl(349, 69%, 43%);
 }
 
-.go-top:active {
+.go-top.active {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
