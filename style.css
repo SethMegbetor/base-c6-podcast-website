@@ -495,18 +495,17 @@ Responsiveness: Using Media Queries
     height: 300px;
   }
 
-  .blog-title{
+  .blog-title {
     --fs-2: 42px;
   }
 
-.footer-brand{
-  margin-bottom: 40px;
-}
+  .footer-brand {
+    margin-bottom: 40px;
+  }
 
-.footer-link-box{
-  grid-template-columns: 1fr 1fr;
-}
-
+  .footer-link-box {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* screen larger than 768px */
@@ -668,7 +667,29 @@ Responsiveness: Using Media Queries
 
 /* screen larger than 1200px */
 @media (min-width: 1200px) {
-  * {
-    display: none;
+  :root {
+    --fs-1: 60px;
+  }
+
+  .container {
+    max-width: 1140px;
+  }
+
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 150px;
+  }
+
+  .hero-banner{
+    top: 55%;
+    right: -50px;
+  }
+
+  .blog{
+    padding-bottom: 150px;
+  }
+
+  footer .container{
+    padding: 100px 15px;
   }
 }
